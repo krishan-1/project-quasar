@@ -12,9 +12,6 @@
     "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=master"
   },
 
- 
-
-
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
