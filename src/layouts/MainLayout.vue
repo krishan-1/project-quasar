@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
         <q-toolbar-title>
-          <router-link to="/">Home</router-link>
+          <!-- <router-link to="/">Home</router-link> -->
         </q-toolbar-title>
         <q-btn side flat round icon="logout"></q-btn>
       </q-toolbar>
@@ -46,12 +46,10 @@
 <script>
 import { defineComponent, ref } from "vue";
 
-
 export default defineComponent({
   name: "MainLayout",
 
-  components: {
-  },
+  components: {},
 
   setup() {
     const leftDrawerOpen = ref(false);
