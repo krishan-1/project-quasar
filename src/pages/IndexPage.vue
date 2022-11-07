@@ -15,22 +15,12 @@
           </template>
         </q-input>
       </q-toolbar>
-      <q-list bordered>
-        <q-item>
-          <q-item-section side>
-            <q-checkbox :model-value="true"></q-checkbox>
-          </q-item-section>
-          <q-item-section> Shopping </q-item-section>
-          <q-item-section side>
-            <q-btn flat round icon="delete"></q-btn>
-          </q-item-section>
-        </q-item>
-      </q-list>
+      <q-list bordered><TodoList /> </q-list>
     </q-card>
 
     <div class="col-xs-3 add-sec">
       <q-toolbar class="bg-accent">
-        <q-btn flat round color="white" class="bg-secondary q-ml-md" icon="add"></q-btn>
+        <AddBtn />
       </q-toolbar>
     </div>
   </q-page>
@@ -38,9 +28,16 @@
 
 <script>
 import { defineComponent } from "vue";
+import AddBtn from "components/AddBtn.vue";
+import TodoList from "components/TodoList.vue";
 
 export default defineComponent({
   name: "IndexPage",
+
+  components: {
+    AddBtn,
+    TodoList,
+  },
 
   data() {
     return {
@@ -54,7 +51,7 @@ export default defineComponent({
   display: inline-block;
 }
 
-.add-sec{
+.add-sec {
   button {
     margin-bottom: -3rem;
   }

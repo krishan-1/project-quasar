@@ -20,6 +20,16 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/log-in",
+    component: () => import("layouts/MainLayout.vue"),
+    children: [
+      {
+        path: "/log-in",
+        component: () => import("pages/LogIn.vue"),
+      },
+    ],
+  },
 
   // Always leave this as last one,
   // but you can also remove it
