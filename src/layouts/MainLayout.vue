@@ -13,7 +13,6 @@
         <q-toolbar-title>
           <!-- <router-link to="/">Home</router-link> -->
         </q-toolbar-title>
-        <q-btn side flat round icon="logout"></q-btn>
       </q-toolbar>
     </q-header>
 
@@ -23,17 +22,10 @@
         <q-item class="bg-grey-3">
           <q-item-section>Links</q-item-section>
           <q-item-section side>
-            <q-btn icon="add" size="sm" flat round></q-btn>
+            <CreateTodoBtn flat round size="sm" />
           </q-item-section>
         </q-item>
-
-        <q-item clickable>
-          <q-item-section side>
-            <q-icon name="local_mall" />
-          </q-item-section>
-          <q-item-section>Shopping List</q-item-section>
-          <q-item-section side>11</q-item-section>
-        </q-item>
+        <TodoListsList />
       </q-list>
     </q-drawer>
 
@@ -44,12 +36,14 @@
 </template>
 
 <script>
+import CreateTodoBtn from "src/components/CreateTodoBtn.vue";
+import TodoListsList from "src/components/TodoListsList.vue";
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: "MainLayout",
 
-  components: {},
+  components: { CreateTodoBtn, TodoListsList },
 
   setup() {
     const leftDrawerOpen = ref(false);

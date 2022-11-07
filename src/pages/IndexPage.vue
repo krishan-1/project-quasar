@@ -15,7 +15,7 @@
           </template>
         </q-input>
       </q-toolbar>
-      <q-list bordered><TodoList /> </q-list>
+      <TodoList bordered />
     </q-card>
 
     <div class="col-xs-3 add-sec">

@@ -1,17 +1,27 @@
 <template>
-  <q-item>
-    <q-item-section side>
-      <q-checkbox :model-value="true"></q-checkbox>
-    </q-item-section>
-    <q-item-section> Shopping </q-item-section>
-    <q-item-section side>
-      <q-btn flat round icon="delete"></q-btn>
-    </q-item-section>
-  </q-item>
+  <q-list>
+    <q-item>
+      <q-item-section side>
+        <UpdateTodoCheckbox :model-value="true" />
+      </q-item-section>
+      <q-item-section> Shopping </q-item-section>
+      <q-item-section side>
+        <DeleteTodoBtn />
+      </q-item-section>
+    </q-item>
+  </q-list>
 </template>
 
 <script>
-export default {};
+import UpdateTodoCheckbox from "components/UpdateTodoCheckbox.vue";
+import DeleteTodoBtn from "components/DeleteTodoBtn.vue";
+
+export default {
+  components: {
+    UpdateTodoCheckbox,
+    DeleteTodoBtn,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
